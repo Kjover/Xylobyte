@@ -2,7 +2,7 @@
 <body>
   <h1>Xylo</h1>
 
-  <div class="Xylobyte">
+  <div class="XyloByte">
     <button>C</button></small></button>
     <button>D</button></small></button>
     <button>E</button></small></button>
@@ -20,16 +20,10 @@
     
     body {
       margin: 0;
-      background: #111;
+      background:#222;
       color: white;
       font-family:serif;
       text-align: center;
-    }
-    button small {
-    display: block;
-    margin-top: 10px;
-    opacity: .6;
-    font-size: 14px;
     }
 
     
@@ -65,6 +59,7 @@ h1 {
     
 
   button:active{transform:translateY(6px)}
+  button:hover{filter:brightness(1.15)}
   </style>
 
 <script>
@@ -78,11 +73,11 @@ function play(i){
 
  x.frequency.value=N[i];x.connect(g);
 
- n.className="note";n.innerHTML="&#9834;";n.style.left=b[i].offsetLeft+"px";n.style.top=b[i].offsetTop+"px";document.body.append(n);
+ n.className="note";n.innerHTML="&#9835;";n.style.left=b[i].offsetLeft+"px";n.style.top=b[i].offsetTop+"px";document.body.append(n);
 
  setTimeout(()=>n.remove(),700);
 
- x.start();x.stop(a.currentTime+.2);
+ x.start();x.stop(a.currentTime+.3);
 }
 
 b.forEach((x,i)=>x.onclick=()=>play(i));
